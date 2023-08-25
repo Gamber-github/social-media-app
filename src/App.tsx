@@ -8,14 +8,12 @@ import { router } from "./routes/router"
 import { theme, styledConfig } from "./styles/theme"
 
 function App() {
-
-
   return (
     <ThemeProvider theme={theme}>
-    <ConfigProvider theme={styledConfig}>
-      <RouterProvider router={router} />
-    </ConfigProvider>
-  </ThemeProvider>
+      <ConfigProvider theme={styledConfig}>
+        <RouterProvider router={router} />
+      </ConfigProvider>
+    </ThemeProvider>
   )
 }
 
