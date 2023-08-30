@@ -1,12 +1,12 @@
-// import React from "react"
+import React from "react"
 
-// import { Input } from "antd"
-// import { InputProps } from "antd/es/input/Input"
+import { Input } from "antd"
+import { TextAreaProps } from "antd/es/input/TextArea"
 
-// const { TextArea } = Input
+const { TextArea: AntTextArea } = Input
 
-// export const TextAreaa: React.FC<InputProps> = ({ children, ...props }) => (
-//   <TextArea showCount {...props}>
-//     {children}
-//   </TextArea>
-// )
+export const TextArea: React.FC<TextAreaProps> = ({ children, ...props }) => (
+  <AntTextArea showCount {...props}>
+    {children}
+  </AntTextArea>
+)

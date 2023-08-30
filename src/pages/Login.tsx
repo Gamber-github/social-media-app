@@ -1,39 +1,22 @@
-import { Layout } from "antd"
-import Checkbox from "antd/es/checkbox/Checkbox"
+import styled from "styled-components"
 
-import { Button } from "../components/ui/Button/Button"
-import { Input } from "../components/ui/Input/Input"
-import { LoginInput } from "../components/ui/Input/LoginInput"
-import { PasswordInput } from "../components/ui/Input/PasswordInput"
-import { Header } from "../components/ui/Typography/Header"
-// import { TextArea } from "../components/ui/Input/TextArea"
+import { LoginForm } from "../components/LoginComponent/LoginForm"
+import { LoginPicture } from "../components/LoginComponent/LoginPicture"
+import { TwoColumns } from "../components/ui/TwoColumns/TwoColumns"
 
-const { Header, Footer, Sider, Content } = Layout
-
-function Login() {
+export const Login = () => {
   return (
-    <Layout>
-      <Header>Header</Header>
-      <Layout>
-        <Sider />
-        <Content>
-          <Header level={3}>Login</Header>
-          <LoginInput size="large" />
-          <PasswordInput placeholder="Password" size="large" />
-          <Button>Login</Button>
-          <Checkbox></Checkbox>
-          {/* <TextArea
-            maxLength={200}
-            style={{ height: 200, marginBottom: 24 }}
-            placeholder="Maximum size is 200 characters"
-          /> */}
-          <Input />
-        </Content>
-        <Sider />
-      </Layout>
-      <Footer />
-    </Layout>
+    <LoginContainer>
+      <TwoColumns left={<LoginForm />} right={<LoginPicture />}></TwoColumns>
+    </LoginContainer>
   )
 }
 
-export default Login
+const LoginContainer = styled.div`
+  width: 600px;
+  height: 90vh;
+  margin: auto auto;
+  -webkit-box-shadow: 0px 0px 40px -9px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 40px -9px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 40px -9px rgba(66, 68, 90, 1);
+`

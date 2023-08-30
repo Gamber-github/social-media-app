@@ -1,7 +1,7 @@
 import { Navigate, RouteObject, createBrowserRouter, generatePath } from "react-router-dom"
 
 import { Public } from "./PublicRoute"
-import Login from "../pages/Login"
+import { Login } from "../pages/Login"
 
 export const APP_ROUTES = {
   main: "/",
