@@ -12,7 +12,7 @@ import { Text } from "../ui/Typography/Text"
 import { Title } from "../ui/Typography/Title"
 
 export const RegisterForm = () => {
-  const isPasswordValid = true
+  const isPasswordValid = false
   const isConfirmPasswordValid = true
   const isEmailValid = true
   const isConfirmEmailValid = true
@@ -21,21 +21,21 @@ export const RegisterForm = () => {
 
   return (
     <FormContainer>
-      <Title level={1}>Register</Title>
+      <Title level={1}>Sign In</Title>
       <Space direction="vertical">
-        <Text>Here is a text about register to a portal</Text>
         <FormInputs>
           <Input placeholder={"First name"} prefix={<UserOutlined />} />
           <Input placeholder={"Last Name"} prefix={<UserOutlined />} />
           <Input placeholder={"Email"} prefix={<MailOutlined />} status={isEmailValid ? "" : "error"} />
           <Input placeholder={"Confirm Email"} prefix={<MailOutlined />} status={isConfirmEmailValid ? "" : "error"} />
           <PasswordInput placeholder={"Password"} prefix={<LockOutlined />} status={isPasswordValid ? "" : "error"} />
+          {!isPasswordValid ? <Text type="danger">Wrong something</Text> : <></>}
           <PasswordInput
             placeholder={"Confirm Password"}
             prefix={<LockOutlined />}
             status={isConfirmPasswordValid ? "" : "error"}
           />
-          <Button style={{ width: "100%" }}>Register</Button>
+          <Button style={{ width: "100%", marginTop: 24 }}>Register</Button>
         </FormInputs>
       </Space>
 
