@@ -1,0 +1,20 @@
+image: node:latest
+before_script:
+  - corepack enable
+  - corepack prepare pnpm@latest-8 --activate
+  - pnpm config set store-dir .pnpm-store
+  - pnpm install
+
+stages:
+  - lint
+  - build
+
+lint:
+  stage: lint
+  script:
+    - pnpm lint:ci
+
+build:
+  stage: build
+  script:
+    - pnpm build
