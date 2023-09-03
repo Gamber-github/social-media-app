@@ -1,8 +1,8 @@
 import Checkbox from "antd/es/checkbox/Checkbox"
 import Space from "antd/es/space"
 import { useNavigate } from "react-router-dom"
-import styled from "styled-components"
 
+import { FormContainer } from "../../styles/form"
 import { Button } from "../ui/Button/Button"
 import { LoginInput } from "../ui/Input/LoginInput"
 import { PasswordInput } from "../ui/Input/PasswordInput"
@@ -31,12 +31,3 @@ export const LoginForm = () => {
     </FormContainer>
   )
 }
-
-const FormContainer = styled.div`
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-`

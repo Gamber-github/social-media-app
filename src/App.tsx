@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components"
 import { router } from "./routes/router"
 import { theme, styledConfig } from "./styles/theme"
 
-function App() {
+export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <ConfigProvider theme={styledConfig}>
@@ -16,5 +16,3 @@ function App() {
     </ThemeProvider>
   )
 }
-
-export default App
