@@ -5,7 +5,7 @@ on: [push]
 jobs:
 
   before_scripts:
-    runs-on: ubuntu-latest
+    runs-on: node-latest
   
     steps:
       - uses: actions/checkout@v3
