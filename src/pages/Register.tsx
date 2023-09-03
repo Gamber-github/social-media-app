@@ -1,19 +1,21 @@
 import styled from "styled-components"
 
-import background from "../../public/login_background.jpg"
-import { LoginForm } from "../components/Login/LoginForm"
+import background from "../../public/register_background.jpg"
+import { RegisterForm } from "../components/Register/RegisterForm"
 import { VerticalBackground } from "../components/ui/Background/VerticalBackground"
 import { TwoColumns } from "../components/ui/TwoColumns/TwoColumns"
 
-export const Login = () => {
+export const Register = () => {
   return (
-    <LoginContainer>
-      <TwoColumns left={<LoginForm />} right={<VerticalBackground source={background} />}></TwoColumns>
-    </LoginContainer>
+    <RegisterContainer>
+      <TwoColumns left={<VerticalBackground source={background} />} right={<RegisterForm />} />
+    </RegisterContainer>
   )
 }
 
-const LoginContainer = styled.div`
+const RegisterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 600px;
   height: 90vh;
   margin: auto auto;

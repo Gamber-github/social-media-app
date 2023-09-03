@@ -2,10 +2,12 @@ import { Navigate, RouteObject, createBrowserRouter, generatePath } from "react-
 
 import { Public } from "./PublicRoute"
 import { Login } from "../pages/Login"
+import { Register } from "../pages/Register"
 
 export const APP_ROUTES = {
   main: "/",
   login: "/login",
+  register: "/register",
 } as const
 
 type RoutesMap = typeof APP_ROUTES
@@ -41,6 +43,10 @@ const routes: (RouteObject & { path: Route })[] = [
   {
     path: "/login",
     element: <Public element={Login} />,
+  },
+  {
+    path: "/register",
+    element: <Public element={Register} />,
   },
 ]
 
