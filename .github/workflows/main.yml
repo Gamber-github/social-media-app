@@ -5,7 +5,7 @@ on: [push]
 jobs:
 
   before_scripts:
-    runs-on: node-latest
+    runs-on: ubuntu-latest
   
     steps:
       - uses: actions/checkout@v3
@@ -13,6 +13,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+      - run: corepack enable 
+      - run: corepack prepare pnpm@latest-8 --activate 
+      - run: pnpm config set store-dir .pnpm-store
       - run: pnpm install
   
   lint:
