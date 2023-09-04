@@ -1,8 +1,8 @@
-import { UserOutlined } from "@ant-design/icons/lib/icons"
-import Avatar from "antd/es/avatar/avatar"
-import Badge from "antd/es/badge"
+import { Col, Row } from "antd"
 import { Header } from "antd/es/layout/layout"
-import Space from "antd/es/space"
+
+import { SearchBar } from "./SearchBar"
+import { Settings } from "./Settings"
 
 export const Navbar = () => {
   return (
@@ -12,20 +12,17 @@ export const Navbar = () => {
         top: 0,
         zIndex: 1,
         width: "100%",
-        display: "flex",
-        alignItems: "center",
       }}
     >
-      <Space size={12}>
-        <Badge count={0}>
-          <Avatar
-            shape="circle"
-            icon={<UserOutlined />}
-            size={48}
-            style={{ backgroundColor: "#fde3cf", color: "#f56a00" }}
-          />
-        </Badge>
-      </Space>
+      <Row gutter={16}>
+        <Col span={8}>
+          <SearchBar />
+        </Col>
+        <Col span={8}></Col>
+        <Col span={8}>
+          <Settings />
+        </Col>
+      </Row>
     </Header>
   )
 }
