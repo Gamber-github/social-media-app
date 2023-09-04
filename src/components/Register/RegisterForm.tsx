@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react"
 
 import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons/lib/icons"
+=======
+import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons/lib/icons"
+import Space from "antd/es/space"
+>>>>>>> main
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 
@@ -12,6 +17,7 @@ import { Link } from "../ui/Typography/Link"
 import { Text } from "../ui/Typography/Text"
 import { Title } from "../ui/Typography/Title"
 
+<<<<<<< HEAD
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/
 const EMAIL_REGEX = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
 
@@ -40,11 +46,19 @@ export const RegisterForm = () => {
     setValidEmail(EMAIL_REGEX.test(email))
     setvalidEmailMatch(email === matchEmail)
   }, [email, matchEmail])
+=======
+export const RegisterForm = () => {
+  const isPasswordValid = true
+  const isConfirmPasswordValid = true
+  const isEmailValid = true
+  const isConfirmEmailValid = true
+>>>>>>> main
 
   const navigate = useNavigate()
 
   return (
     <FormContainer>
+<<<<<<< HEAD
       <Title level={1}>Sign In</Title>
 
       <FormInputs>
@@ -105,6 +119,25 @@ export const RegisterForm = () => {
           Register
         </Button>
       </FormInputs>
+=======
+      <Title level={1}>Register</Title>
+      <Space direction="vertical">
+        <Text>Here is a text about register to a portal</Text>
+        <FormInputs>
+          <Input placeholder={"First name"} prefix={<UserOutlined />} />
+          <Input placeholder={"Last Name"} prefix={<UserOutlined />} />
+          <Input placeholder={"Email"} prefix={<MailOutlined />} status={isEmailValid ? "" : "error"} />
+          <Input placeholder={"Confirm Email"} prefix={<MailOutlined />} status={isConfirmEmailValid ? "" : "error"} />
+          <PasswordInput placeholder={"Password"} prefix={<LockOutlined />} status={isPasswordValid ? "" : "error"} />
+          <PasswordInput
+            placeholder={"Confirm Password"}
+            prefix={<LockOutlined />}
+            status={isConfirmPasswordValid ? "" : "error"}
+          />
+          <Button style={{ width: "100%" }}>Register</Button>
+        </FormInputs>
+      </Space>
+>>>>>>> main
 
       <Text>
         Already registered? <Link onClick={() => navigate("/login")}>Login</Link>
@@ -114,8 +147,14 @@ export const RegisterForm = () => {
 }
 
 const FormInputs = styled.div`
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 300px;
+=======
+  display: grid;
+  grid-gap: 8px;
+  width: 100%;
+>>>>>>> main
 `

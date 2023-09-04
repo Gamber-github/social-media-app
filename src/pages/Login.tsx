@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+<<<<<<< HEAD
+=======
+import background from "../../public/login_background.jpg"
+>>>>>>> main
 import { LoginForm } from "../components/Login/LoginForm"
 import { VerticalBackground } from "../components/ui/Background/VerticalBackground"
 import { TwoColumns } from "../components/ui/TwoColumns/TwoColumns"
