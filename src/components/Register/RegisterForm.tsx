@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 
 import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons/lib/icons"
-import Space from "antd/es/space"
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 
