@@ -5,14 +5,17 @@ import { RouterProvider } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 
 import { router } from "./routes/router"
+import { MockedStoreContextProvider } from "./store/storeProvider"
 import { theme, styledConfig } from "./styles/theme"
 
 export const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <ConfigProvider theme={styledConfig}>
-        <RouterProvider router={router} />
-      </ConfigProvider>
-    </ThemeProvider>
+    <MockedStoreContextProvider>
+      <ThemeProvider theme={theme}>
+        <ConfigProvider theme={styledConfig}>
+          <RouterProvider router={router} />
+        </ConfigProvider>
+      </ThemeProvider>
+    </MockedStoreContextProvider>
   )
 }
