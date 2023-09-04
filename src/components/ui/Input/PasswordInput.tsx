@@ -8,6 +8,7 @@ export const PasswordInput: React.FC<InputProps> = ({ children, ...props }) => (
   <AntdInput.Password
     iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
     prefix={<LockOutlined />}
+    size={"large"}
     {...props}
   >
     {children}

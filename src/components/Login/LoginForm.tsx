@@ -14,7 +14,7 @@ export const LoginForm = () => {
   const navigate = useNavigate()
 
   return (
-    <FormContainer>
+    <FormContainer style={{ height: "100%" }}>
       <Title level={1}>Login</Title>
       <Space direction="vertical">
         <LoginInput size="large" />
