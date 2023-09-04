@@ -36,4 +36,5 @@ export const MockedStoreContextProvider: React.FC<{ children: ReactNode }> = ({ 
   return <MockedStoreContext.Provider value={value}>{children}</MockedStoreContext.Provider>
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useStore = () => useContext(MockedStoreContext)

@@ -1,4 +1,4 @@
-import { Navigate, RouteObject, createBrowserRouter, generatePath } from "react-router-dom"
+import { RouteObject, createBrowserRouter, generatePath } from "react-router-dom"
 
 import { Private } from "./PrivateRoute"
 import { Public } from "./PublicRoute"
@@ -39,10 +39,6 @@ export const getUrl = <T extends RouteName>(url: T, ...[params]: GetPayload<T>) 
   generatePath<string>(APP_ROUTES[url], params)
 
 const routes: (RouteObject & { path: Route })[] = [
-  // {
-  //   path: "/",
-  //   element: <Navigate to="/" replace />,
-  // },
   {
     path: "/login",
     element: <Public element={Login} />,
