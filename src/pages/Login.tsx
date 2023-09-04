@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-import background from "../../public/login_background.jpg"
 import { LoginForm } from "../components/Login/LoginForm"
 import { VerticalBackground } from "../components/ui/Background/VerticalBackground"
 import { TwoColumns } from "../components/ui/TwoColumns/TwoColumns"
+import background from "../images/login_background.jpg"
 
 export const Login = () => {
   return (
